@@ -65,7 +65,6 @@ h3 {
 	font-size: 20px;
 	line-height: 30px;
 }
-}
 
 h4 {
 	font-size: 14px;
@@ -95,16 +94,16 @@ dd {
 
 button {
 	/* font-family: 'Henny Penny', cursive; */
-	align-self: center;
-  background: #FFAD60;
-  color: #000;
-  padding: 10px;
-  text-align: center;
-  box-shadow: 1px 1px #C4FA8D
-	font-size: 25px;
-	margin: 10px;
-	border: 1px solid black;
-	cursor: pointer;
+align-self: center;
+background: #FFAD60;
+color: #000;
+padding: 10px;
+text-align: center;
+box-shadow: 1px 1px #C4FA8D;
+font-size: 25px;
+margin: 10px;
+border: 1px solid black;
+cursor: pointer;
 }
 
 button:hover {
