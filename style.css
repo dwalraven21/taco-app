@@ -1,0 +1,363 @@
+
+/* * {
+	border: 1px solid black;
+} */
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Henny Penny', cursive; */
+
+/* colors:
+grapefruit: #FA8D8E
+orange: #FAC28D;
+dark-orange: #FFAD60;
+warm-off-white: #FFFDD3;
+lemon: #FAF98D
+lime: #C4FA8D
+dark-green: #79C72A;
+aquamarine: #8DFAC3 */
+
+
+body {
+	background-color: #000;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0 auto;
+
+}
+
+a {
+	text-decoration: none;
+	color: #79C72A;
+	cursor: pointer;
+}
+
+p {
+	font-size: 15px;
+	line-height: 20px;
+	padding: 0 auto;
+	margin: 0 auto
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Henny Penny', cursive;
+	background-color: #C4FA8D;
+	margin: 0;
+	font-size: 30px;
+	padding: 10px;
+
+}
+
+h2 {
+ text-align: center;
+ font-size: 16px;
+ line-height: 20px;
+ background-color: #FFAD60;
+ padding: 15px;
+ margin-top: 0;
+}
+
+h2 a {
+	color: white;
+}
+
+h3 {
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+}
+}
+
+h4 {
+	font-size: 14px;
+}
+
+dl {
+	background-color: #79C72A;
+	width: 100%;
+	align-self: center;
+	/* border: 1px solid black; */
+}
+
+dt {
+	font-family: 'Henny Penny', cursive;
+	font-size: 20px;
+	background-color: #C4FA8D;
+	width: 100%;
+	align-self: center;
+	text-align: center;
+	border: 1px solid black;
+}
+
+dd {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+button {
+	/* font-family: 'Henny Penny', cursive; */
+	align-self: center;
+  background: #FFAD60;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 1px 1px #C4FA8D
+	font-size: 25px;
+	margin: 10px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+button:hover {
+	cursor: pointer;
+  background: #79C72A;
+  box-shadow: 1px 1px #FFAD60;
+  color: white;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+
+
+}
+/* ======= CAROUSEL SECTION ======== */
+
+.button-div {
+	width: 100%;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.carousel-images {
+  width: 100%;
+  background: #79C72A;
+  padding: 10px;
+	margin: 0 auto;
+  box-sizing: border-box;
+  /* box-shadow: 2px 2px #FFAD60; */
+}
+.carousel-images img {
+  width: 100%;
+	display: none;
+}
+
+.carousel-images img:first-of-type {
+	display: block;
+}
+
+.carousel-button {
+	display: none;
+  align-self: center;
+  background: #FFAD60;
+  color: #000;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px #79C72A;
+	margin: 10px;
+}
+.carousel-button:hover {
+	display: none;
+  cursor: pointer;
+  background: #79C72A;
+  box-shadow: 1px 1px #FFAD60;
+  color: white;
+}
+
+/* ======= Recipe Section ======== */
+
+.all-recipes {
+	width: 100%;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+
+}
+
+.bottom-buttons {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.type {
+	display: none;
+	width: 80%;
+	background-color: #fff;
+	text-align: center;
+	align-self: center;
+	margin: 5px auto 0 auto;
+	padding: 10px 20px;
+	border: 1px solid black;
+	font-size: 18px;
+	line-height: 25px;
+
+}
+
+.display_favorite_taco {
+  display: none;
+	flex-flow: column nowrap;
+	margin: 10px auto;
+	width: 80%;
+  justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
+	line-height: 30px;
+	color: #fff;
+
+}
+
+
+.display-full-name {
+  display: none;
+	flex-flow: column nowrap;
+	margin: 10px auto;
+	width: 80%;
+  justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
+	line-height: 30px;
+	color: #fff;
+
+}
+
+.recipe {
+	display: none;
+	background-color: #fff;
+	width: 80%;
+	align-self: center;
+	margin: 0 auto;
+	padding: 20px;
+	line-height: 25px;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-right:1px solid black;
+}
+
+.expand {
+	display: none;
+}
+
+.show-recipe {
+	display: none;
+}
+
+.new-recipe {
+	display: none;
+}
+
+#favorite {
+	display: none;
+}
+
+#print-all {
+	display: none;
+}
+
+.print {
+	display: none;
+}
+
+/* ======= MODAL Section ======== */
+#modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0; /* I think this starts the div at the top of the page*/
+	left: 0; /* I think this starts the div at far left */
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+	display: none;
+	/*Set this to `none` so that the modal does not show initially on page load.*/
+
+}
+
+#modal-text {
+margin: 0 auto;
+padding: 0 10px;
+}
+
+#modal-textbox {
+	background-color: white;
+	height: auto;
+	width: 100%;
+	max-width: 400px;;
+	border-radius: 2px;
+	line-height: 12px;
+	padding: 2px;
+	margin: 15px auto;
+	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	/*This will give the box some depth.*/
+
+}
+
+#modal-footer {
+	text-align: right;
+}
+
+
+.footer {
+	font-size: 20px;
+	line-height: 35px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
+	color: #fff;
+}
+
+
+/* ======= DESKTOP VIEW ======== */
+@media (min-width: 600px) {
+
+	h1 {
+		font-size: 50px;
+	}
+
+	h2 {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	button {
+		font-size: 18px;
+	}
+
+	dt {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	.type {
+		font-size: 18px;
+	}
+
+	.footer {
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Taco Recipe Generator</title>
+		<!-- =========== TO GET MOBILE VIEW TO WORK ON IPHONE ======== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- =========== LINKS / SCRIPTS ======== -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Henny+Penny|Snowburst+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="app.js">
+		</script>
+	</head>
+	<body>
+	<!-- This should help make the page more mobile-friendly -->
+	<meta name=”viewport” content=”width=device-width, initial-scale=1″>
+<!-- =========== MODAL ======== -->
+<div id="modal">
+	<div id="modal-textbox">
+		<div id="modal-text"></div>
+		<div id="modal-footer">
+			<button class="modal-buttons" id="confirm-print">Print</button>
+			<button class="modal-buttons" id="close">Close</button>
+		</div>
+		</div>
+	</div>
+<!-- =========== CONTAINER ======== -->
+	<div class="container">
+<!-- =========== HEADER ======== -->
+			<div class="header">
+				<!-- Page Title -->
+				<h1>Mex-and-Match</h1>
+				<!-- Subtitle -->
+				<h2>Take your taco game to the next level with this recipe generator! Design the taco of your dreams, then print or your favorite recipes.</h2>
+<!-- =========== CAROUSEL CONTAINER ======== -->
+				<div class="carousel-container">
+					<!-- previous button -->
+					<div class="carousel-button previous">
+						<!-- from linearicons icon font -->
+						<span class="lnr lnr-chevron-left"></span>
+					</div>
+					<!-- images -->
+					<div class="carousel-images">
+						<img src="images/alexander-mils.jpg" alt="tacos">
+						<img src="images/edgar-castrejon.jpg" alt="tacos">
+						<img src="images/christine-siracusa.jpg" alt="tacos">
+						<img src="images/tai-s.jpg" alt="tacos">
+					</div>
+					<!-- next button -->
+					<div class="carousel-button next">
+						<!-- from linearicons icon font -->
+						<span class="lnr lnr-chevron-right"></span>
+					</div>
+				</div>
+
+<!-- =========== DISPLAY TACO NAME ======== -->
+<div class="display_favorite_taco">
+<h3>Your Favorite Recipe:</h3>
+	<div class="favoriteName">
+	</div>
+<div class="view-favorite-recipe">
+	<button type="button" name="button" id="print-favorite">Print Favorite Recipe</button>
+</div>
+</div>
+<div class="display-full-name">
+<h3>Your New Taco Is:</h3>
+</div>
+			<div class="button-div">
+				<button type="button" name="button" id="generate-taco">Generate New Taco</button>
+				<div class="print">
+					<button type="button" name="button" id="print-all">Print All Recipes</button>
+				</div>
+				<div class="favorite">
+					<button type="button" name="button" id="favorite">Save As Favorite</button>
+				</div>
+				<!-- <div class="view-favorite">
+					<button type="button" name="button" id="view-favorite">View Favorite Recipes</button>
+				</div> -->
+				<div class="expand">
+					<button type="button" name="button" id="expand">Expand / Close All</button>
+				</div>
+			</div>
+
+
+<!-- ========= DISPLAY RECIPES SECTION ====== -->
+				<div class="all-recipes">
+
+					<dl>
+						<!-- BASE -->
+						<dt>Base</dt>
+						<dd class='type' id="base"></dd>
+						<dd class='recipe'id="base-recipe"></dd>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-base-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe' id='new-base-button'>Try A Different Base</button>
+							<button type="button" name="button" class='print' id='print-base'>Print Recipe</button>
+
+						</div>
+
+
+						<!-- CONDIMENT -->
+						<dt>Condiment</dt>
+						<dd class='type' id="condiment"></dd>
+						<dd class='recipe'id="condiment-recipe"></dd>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-condiment-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe' id='new-condiment-button'>Try A Different Condiment</button>
+							<button type="button" name="button" class='print' id='print-condiment'>Print Recipe</button>
+						</div>
+
+
+						<!-- MIX IN -->
+						<dt>Mix-In</dt>
+						<dd class='type'id="mixin"></dd>
+						<dd class='recipe' id="mixin-recipe"></dd>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-mixin-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe'id='new-mixin-button'>Try A Different Mix-In</button>
+							<button type="button" name="button" class='print' id='print-mix'>Print Recipe</button>
+						</div>
+
+
+						<!-- SEASONING -->
+						<dt>Seasoning</dt>
+						<dd class='type' id="seasoning"></dd>
+						<dd class='recipe'id="seasoning-recipe"></dd>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-seasoning-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe'id='new-seasoning-button'>Try A Different Seasoning</button>
+							<button type="button" name="button" class='print' id='print-seasoning'>Print Recipe</button>
+						</div>
+
+
+						<!-- SHELL -->
+						<dt>Shell</dt>
+						<dd class='type' id="shell"></dd>
+						<dd class='recipe' id="shell-recipe"></dd>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-shell-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe' id='new-shell-button'>Try A Different Shell</button>
+							<button type="button" name="button" class='print' id='print-shell'>Print Recipe</button>
+						</div>
+					</dl>
+				</div>
+			</div>
+<!-- =========== FOOTER ======== -->
+			<div class="footer">
+				<p>Be sure to check out <a href="https://dwalraven21.github.io/the_perfect_cocktail/index.html" target="_blank">The Perfect Cocktail</a> to pair with your taco and make it a fiesta!</p>
+				<p>All photos were taken from the open source library: <a href="https://unsplash.com/" target="_blank">unsplash.com</a></p>
+				<p>Photo credit goes to <a href="https://unsplash.com/@alexandermils" target="_blank">Alexander Mils
+				</a>, <a href="https://unsplash.com/@taiscaptures" target="_blank">Tai's Captures</a>, <a href="https://unsplash.com/@christine_siracusa" target="_blank">Christine Siracusa</a> and <a href="https://unsplash.com/@edgarraw" target="_blank">Edgar Castrejon</a></p>
+				<p>This app was created with data from the API: <a href="https://github.com/evz/tacofancy-api" target="_blank">tacofancy</a> .</p>
+			</div>
+</div>
+	</body>
+</html>
